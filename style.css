@@ -540,6 +540,83 @@ height: 273px; }
   font-size: 10px;
 }
 
+/* Tablet & smaller */
+@media (max-width: 992px) {
 
+  /* reduce huge side padding */
+  .section{
+    padding: 50px 24px 90px 24px;
+  }
 
+  /* nav */
+  .menu{ display:none; }
+  .menu-btn{ display:block; }
+  .nav .btn-main{ display:none; } /* optional: stops overflow in tight width */
+
+  /* stats */
+  .stats-box{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* features */
+  .features-grid{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e";
+  }
+
+  .card-1,.card-2,.card-3,.card-4,.card-5{
+    width: auto !important;
+    height: auto !important;
+    min-height: auto;
+  }
+
+  /* episodes */
+  .episodes-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* host */
+  .host-card{
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  .hero-title{ font-size: 34px; }
+  .title{ font-size: 34px; }
+
+  .section{
+    padding: 44px 16px 80px 16px;
+  }
+
+  .stats-box{
+    grid-template-columns: 1fr;
+  }
+
+  .episodes-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card{
+    padding: 22px;
+    border-radius: 26px;
+  }
+
+  .host-img{
+    width: 140px;
+    height: 140px;
+  }
+
+  .platforms{
+    gap: 10px;
+  }
+}
 
